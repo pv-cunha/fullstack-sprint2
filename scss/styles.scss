@@ -15,6 +15,7 @@
 @import './components/header/header';
 @import './components/content/breadcrumbs';
 @import './components/content/filter';
+@import './components/content/products';
 
 * {
   margin: 0;
@@ -79,109 +80,6 @@ li {
 
 .hide {
   display: none;
-}
-
-.main {
-  margin: 0 auto;
-  width: 80%;
-  max-width: 1100px;
-
-  padding: 16px;
-
-  // inicio filters
-  .filters {
-    border-top: 1px solid #e3e3e3;
-    border-bottom: 1px solid #e3e3e3;
-
-    @include for-phone-only {
-      display: none;
-    }
-
-    .list {
-      display: flex;
-
-      .item {
-        display: flex;
-        align-items: center;
-        padding: 12px 14px;
-
-        &:hover {
-          cursor: pointer;
-          background-color: rgba(38, 30, 30, 0.04);
-        }
-      }
-
-      .label {
-        text-transform: uppercase;
-        font-size: 0.6875rem;
-        font-weight: 400;
-        color: #261e1e;
-      }
-
-      .img {
-        height: 20px;
-        margin-left: 8px;
-      }
-    }
-  } // fim filters
-
-  // inicio products
-  .products {
-    margin-top: 20px;
-    margin-bottom: 20px;
-
-    .row {
-      margin: 8px;
-    }
-
-    .list {
-      display: flex;
-      justify-content: space-between;
-
-      @include for-phone-only {
-        flex-wrap: wrap;
-      }
-    }
-
-    .cards {
-      @include for-phone-only {
-        flex-basis: 50%;
-      }
-
-      .card {
-        cursor: pointer;
-        border: 1px solid white;
-        padding: 8px;
-
-        &:hover {
-          box-shadow: 0px 2px 1px -1px rgb(0 0 0 / 20%),
-            0px 1px 1px 0px rgb(0 0 0 / 14%), 0px 1px 3px 0px rgb(0 0 0 / 12%);
-        }
-
-        .img {
-          max-width: 100%;
-          max-height: 100%;
-        }
-
-        .description {
-          font-size: 0.6875rem;
-          font-weight: 400;
-          color: rgba(0, 0, 0, 0.87);
-          text-transform: uppercase;
-          text-align: center;
-          margin-top: 8px;
-          margin-bottom: 10px;
-        }
-
-        .price {
-          font-size: 0.8125rem;
-          font-weight: 600;
-          text-transform: uppercase;
-          text-align: center;
-        }
-      }
-    }
-  } // fim products
 }
 
 .footer {
