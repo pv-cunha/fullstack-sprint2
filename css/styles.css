@@ -16,6 +16,7 @@
 @media (max-width: 767.98px) {
   .header {
     height: 8rem;
+    padding-bottom: 20px;
   }
 }
 .header__top {
@@ -191,6 +192,54 @@
 .breadcrumbs__navegacao__list li strong {
   font-size: 0.8rem;
   font-weight: bold;
+}
+
+.filters {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  height: 100%;
+  padding: 0 0.3rem;
+  border-bottom: 1px solid #eee;
+}
+@media (max-width: 767.98px) {
+  .filters {
+    display: none;
+  }
+}
+@media (min-width: 768px) and (max-width: 1199.98px) {
+  .filters {
+    display: none;
+  }
+}
+.filters__list {
+  display: flex;
+}
+.filters__list__item button {
+  border: none;
+  border-radius: 4px;
+  padding: 12px 10px;
+  min-width: 64px;
+  background: #fff;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+.filters__list__item button:hover {
+  background: #eee;
+}
+.filters__list__item button p {
+  text-transform: uppercase;
+  font-size: 0.7rem;
+  line-height: 1.75;
+}
+.filters__list__item button p::after {
+  content: "";
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  vertical-align: middle;
+  margin-left: 0.5rem;
+  background: url("../../../assets/filter.svg") center no-repeat;
 }
 
 * {

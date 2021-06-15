@@ -19,6 +19,8 @@
 
   @include for-phone-only {
     height: 8rem;
+
+    padding-bottom: 20px;
   }
 
   &__top {
