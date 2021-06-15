@@ -13,76 +13,57 @@
 </head>
 
 <body>
-  <div class="header">
-    <div class="container">
-      <div class="mobile">
-        <div class="drawer drawer-active">
-          <img src="assets/menu.svg">
-          <p class="title">menu</p>
-        </div>
-        <div class="drawer close">
-          <img src="assets/close.svg">
-          <p class="title">fechar</p>
-        </div>
-        <h1 class="logo">
-          <img class="img" src="assets/rchlo.svg" />
-        </h1>
-      </div>
-      <div class="desktop">
-        <h1 class="logo">
-          <img class="img" src="assets/riachuelo.svg" />
-        </h1>
-      </div>
-      <div class="s">
-        <img class="i" src="assets/search.svg">
-        <input class="in" type="search" placeholder="O que você está procurando?" />
+  <header class="header">
+    <div class="header__top">
+      <div class="header__top__mobile">
+        <button class="header__top__mobile__drawer drawer-active" type="menu">
+          <img src="assets/menu.svg" alt="Botão para abrir o menu navegação">
+          <p class="header__mobile__title">menu</p>
+        </button>
+
+        <button class="header__top__mobile__drawer drawer-close" type="menu">
+          <img src="assets/close.svg" alt="Botão para fechar o menu navegação">
+          <p class="header__mobile__title">fechar</p>
+        </button>
       </div>
 
-      <div class="menu">
-        <ul class="list">
-          <li class="item">
-            <a class="link" href="">
-              <span>Novidades</span>
-            </a>
-          </li>
-          <li class="item">
-            <a class="link" href="">Feminino</a>
-          </li>
-          <li class="item">
-            <a class="link" href="">Masculino</a>
-          </li>
-          <li class="item">
-            <a class="link" href="">Infantil</a>
-          </li>
-          <li class="item">
-            <a class="link" href="">Moda Íntima</a>
-          </li>
-          <li class="item">
-            <a class="link" href="">Calçados</a>
-          </li>
-          <li class="item">
-            <a class="link" href="">Acessórios e Relógios</a>
-          </li>
-          <li class="item">
-            <a class="link" href="">Beleza e Perfume</a>
-          </li>
-          <li class="item">
-            <a class="link" href="">Casa Riachuelo</a>
-          </li>
-          <li class="item">
-            <a class="link" href="">Eletrônicos</a>
-          </li>
-          <li class="item">
-            <a class="link" href="">Personagens</a>
-          </li>
-          <li class="item">
-            <a class="link" href="">Outlet</a>
-          </li>
-        </ul>
+      <div class="header__top-mobile">
+        <img class="header-mobile__logo" src="assets/rchlo.svg" alt="Home Riachuelo" />
       </div>
+
+      <div class="header__top-desktop">
+        <img class="header-desktop__logo" src="assets/riachuelo.svg" alt="Home Riachuelo" />
+      </div>
+
+      <span></span>
     </div>
-  </div>
-  <div class="main">
+
+    <div class="header__searchbar">
+      <img class="header__searchbar__svg" src="assets/search.svg" alt>
+      <label for="searchbar__input" class="escondeVisualmente">O que você está procurando ?</label>
+      <input class="header__searchbar__input" id="searchbar__input" type="search" placeholder="O que você está procurando?" />
+    </div>
+
+    <nav class="header__nav">
+      <ul class="header__nav__list">
+        <li class="header__nav__list__item"><a href="#">Novidades</a></li>
+        <li class="header__nav__list__item"><a href="#">Feminimo</a></li>
+        <li class="header__nav__list__item"><a href="#">Masculino</a></li>
+        <li class="header__nav__list__item"><a href="#">Infantil</a></li>
+        <li class="header__nav__list__item"><a href="#">Moda Íntima</a></li>
+        <li class="header__nav__list__item"><a href="#">Calçados</a></li>
+        <li class="header__nav__list__item"><a href="#">Acessórios e Relógios</a></li>
+        <li class="header__nav__list__item"><a href="#">Beleza e Perfume</a></li>
+        <li class="header__nav__list__item"><a href="#">Casa Riachuelo</a></li>
+        <li class="header__nav__list__item"><a href="#">Eletrônicos</a></li>
+        <li class="header__nav__list__item"><a href="#">Personagens</a></li>
+        <li class="header__nav__list__item"><a href="#">Outlet</a></li>
+      </ul>
+    </nav>
+
+  </header>
+
+  <main class="main">
     <div class="breadcrumbs">
       <div class="nav">
         <ol class="list">
@@ -264,7 +245,9 @@
         </ol>
       </div>
     </div>
-  </div>
+  </main>
+
+
   <div class="footer">
     <div class="container contact">
       <p class="info">Receba ofertas e novidades por e-mail</p>
