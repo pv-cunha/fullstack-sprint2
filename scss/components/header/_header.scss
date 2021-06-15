@@ -180,10 +180,12 @@
 
         padding-bottom: 8px;
 
+        border-bottom: 2px solid transparent;
+
         transition: border-bottom 0.1s ease;
 
         &:hover {
-          border-bottom: 2px solid #333;
+          border-color: #333;
         }
       }
     }

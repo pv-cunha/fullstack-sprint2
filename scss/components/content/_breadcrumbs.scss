@@ -1,0 +1,41 @@
+.breadcrumbs {
+  padding: 0 0.5rem 0.5rem 0.5rem;
+
+  border-bottom: 1px solid #eee;
+
+  @include for-phone-only {
+    display: none;
+  }
+
+  @include for-tablet-only {
+    display: none;
+  }
+
+  &__navegacao {
+    padding-bottom: 0.5rem;
+  }
+
+  &__navegacao__list {
+    display: flex;
+
+    a {
+      font-size: 0.75rem;
+      font-weight: 600;
+      color: #878787;
+    }
+
+    &__separator {
+      display: flex;
+      margin: 0 8px;
+    }
+
+    a:hover {
+      border-bottom: 1px solid #333;
+    }
+
+    li strong {
+      font-size: 0.8rem;
+      font-weight: bold;
+    }
+  }
+}
