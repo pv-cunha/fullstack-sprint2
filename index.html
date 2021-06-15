@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link rel="shortcut icon" type="image/png" href="assets/favicon.png" />
   <link rel="stylesheet" href="css/reset.css" />
   <link rel="stylesheet" href="css/styles.css" />
@@ -12,18 +12,29 @@
   <title>Riachuelo</title>
 </head>
 
+<script>
+  document.write(
+    '<script src="http://' +
+    (location.host || "localhost").split(":")[0] +
+    ':35729/livereload.js?snipver=1"></' +
+    "script>"
+  );
+</script>
+
 <body>
+  <a class="escondeVisualmente" href="#conteudoPrincipal">Ir para conteúdo principal</a>
+
   <header class="header">
     <div class="header__top">
       <div class="header__top__mobile">
         <button class="header__top__mobile__drawer drawer-active" type="menu">
           <img src="assets/menu.svg" alt="Botão para abrir o menu navegação">
-          <p class="header__mobile__title">menu</p>
+          <p class="header__top__mobile__title">menu</p>
         </button>
 
         <button class="header__top__mobile__drawer drawer-close" type="menu">
           <img src="assets/close.svg" alt="Botão para fechar o menu navegação">
-          <p class="header__mobile__title">fechar</p>
+          <p class="header__top__mobile__title">fechar</p>
         </button>
       </div>
 
@@ -63,7 +74,7 @@
 
   </header>
 
-  <main role="main">
+  <main id="conteudoPrincipal" role="main">
     <section class="breadcrumbs">
       <nav class="breadcrumbs__navegacao">
         <ol class="breadcrumbs__navegacao__list">
@@ -263,41 +274,43 @@
   <div class="footer">
     <div class="container contact">
       <p class="info">Receba ofertas e novidades por e-mail</p>
-      <form action="/">
-        <input class="input" type="email" placeholder="Digite aqui seu e-mail" />
+      <form>
+        <label for="email__input" class="escondeVisualmente">Digite aqui seu e-mail</label>
+        <input class="input" id='email__input' type="email" placeholder="Digite aqui seu e-mail" />
         <button class="btn" type="submit">
           <span class="txt">Cadastrar</span>
         </button>
       </form>
+
       <div class="apps">
         <p class="msg">Baixe nosso App</p>
-        <a class="app" href="#">
-          <img class="img" src="assets/google-play.webp" />
+        <a class="app" href="#" title="Googleplay">
+          <img class="img" src="assets/google-play.webp" alt="Googleplay" />
         </a>
-        <a class="app" href="#">
-          <img class="img" src="assets/app-store.webp" />
+        <a class="app" href="#" title="AppleStore">
+          <img class="img" src="assets/app-store.webp" alt="AppleStore" />
         </a>
       </div>
     </div>
     <div class="links">
       <div class="container contacts">
         <div class="col">
-          <a href="#" class="contact-icon">
-            <img class="img" src="assets/ico-attendance.svg" />
+          <a href="#" class="contact-icon" title="Ícone Telefone">
+            <img class="img" src="assets/ico-attendance.svg" alt="Ícone Telefone" />
             <p class="text">Atendimento</p>
           </a>
-          <a href="#" class="contact-icon">
-            <img class="img" src="assets/ico-faq.svg" />
+          <a href="#" class="contact-icon" title="Ícone Perguntas Frequentes">
+            <img class="img" src="assets/ico-faq.svg" alt="Ícone Perguntas Frequentes" />
             <p class="text">Perguntas Frequentes</p>
           </a>
         </div>
         <div class="col">
-          <a href="#" class="contact-icon">
-            <img class="img" src="assets/ico-invoice-and-statement.svg" />
+          <a href="#" class="contact-icon" title="Ícone Fatura e Extrato">
+            <img class="img" src="assets/ico-invoice-and-statement.svg" alt="Ícone Fatura e Extrato" />
             <p class="text">Fatura e Extrato</p>
           </a>
-          <a href="#" class="contact-icon">
-            <img class="img" src="assets/ico-work-with-us.svg" />
+          <a href="#" class="contact-icon" title="Ícone Trabalhe Conosco">
+            <img class="img" src="assets/ico-work-with-us.svg" alt="Ícone Trabalhe Conosco" />
             <p class="text">Trabalhe Conosco</p>
           </a>
         </div>
@@ -305,7 +318,7 @@
       <hr class="separator">
       <ul class="companies">
         <li class="company-links">
-          <h1 class="title">Cartão Riachuelo</h1>
+          <h3 class="title">Cartão Riachuelo</h3>
           <ul>
             <li class="item">
               <a class="text" href="#">
@@ -330,7 +343,7 @@
           </ul>
         </li>
         <li class="company-links">
-          <h1 class="title">Sobre a Riachuelo</h1>
+          <h3 class="title">Sobre a Riachuelo</h3>
           <ul>
             <li class="item" class="item">
               <a class="text" href="#">A Empresa</a>
@@ -375,7 +388,7 @@
           </ul>
         </li>
         <li class="company-links">
-          <h1 class="title">Moda que Transforma</h1>
+          <h3 class="title">Moda que Transforma</h3>
           <ul>
             <li class="item">
               <a class="text" href="#">Na prática</a>
@@ -396,7 +409,7 @@
           </ul>
         </li>
         <li class="company-links">
-          <h1 class="title">Ajuda</h1>
+          <h3 class="title">Ajuda</h3>
           <ul>
             <li class="item">
               <a class="text" href="#">Atendimento</a>
@@ -425,66 +438,66 @@
     </div>
     <div class="container payment">
       <div class="alternatives">
-        <h1 class="title">Formas de Pagamento</h1>
-        <img class="img" src="assets/ico-cartao-rchlo1.webp" />
-        <img class="img" src="assets/ico-cartao-rchlo2.webp" />
-        <img class="img" src="assets/ico-cartao-rchlo3.webp" />
-        <img class="img" src="assets/ico-cartao-visa.png" />
-        <img class="img" src="assets/ico-cartao-master.webp" />
-        <img class="img" src="assets/ico-cartao-amex.webp" />
-        <img class="img" src="assets/ico-cartao-diners.png" />
-        <img class="img" src="assets/ico-cartao-elo.png" />
-        <img class="img" src="assets/ico-boleto.webp" />
-        <img class="img" src="assets/ico-paypal.png" />
+        <h4 class="title">Formas de Pagamento</h4>
+        <img class="img" src="assets/ico-cartao-rchlo1.webp" alt="Cartão Riachuelo 1" />
+        <img class="img" src="assets/ico-cartao-rchlo2.webp" alt="Cartão Riachuelo 2" />
+        <img class="img" src="assets/ico-cartao-rchlo3.webp" alt="Cartão Riachuelo 3" />
+        <img class="img" src="assets/ico-cartao-visa.png" alt="Cartão Visa" />
+        <img class="img" src="assets/ico-cartao-master.webp" alt="Cartão Master" />
+        <img class="img" src="assets/ico-cartao-amex.webp" alt="Cartão Amex" />
+        <img class="img" src="assets/ico-cartao-diners.png" alt="Cartão diners" />
+        <img class="img" src="assets/ico-cartao-elo.png" alt="Cartão elo" />
+        <img class="img" src="assets/ico-boleto.webp" alt="Boleto" />
+        <img class="img" src="assets/ico-paypal.png" alt="Paypal" />
       </div>
       <div class="social">
-        <h1 class="title">Siga a Riachuelo</h1>
+        <h4 class="title">Siga a Riachuelo</h4>
         <div class="icons">
           <div class="icon">
-            <a href="#">
-              <img class="img" src="assets/ico-facebook.svg" />
+            <a href="#" title="Ícone Facebook">
+              <img class="img" src="assets/ico-facebook.svg" alt="Ícone Facebook" />
             </a>
           </div>
 
           <div class="icon">
-            <a href="#">
-              <img class="img" src="assets/ico-instagram.svg" />
+            <a href="#" title="Ícone Instagram RCHLO">
+              <img class="img" src="assets/ico-instagram.svg" alt="Ícone Instagram RCHLO" />
             </a>
             <p class="text">RCHLO</p>
           </div>
 
           <div class="icon">
-            <a href="#">
-              <img class="img" src="assets/ico-instagram.svg" />
+            <a href="#" title="Ícone Instagram Casa RCHLO">
+              <img class="img" src="assets/ico-instagram.svg" alt="Ícone Instagram Casa RCHLO" />
             </a>
             <p class="text">CASA RCHLO</p>
           </div>
 
           <div class="icon">
-            <a href="#">
-              <img class="img" src="assets/ico-pinterest.svg" />
+            <a href="#" title="Ícone Pinterest">
+              <img class="img" src="assets/ico-pinterest.svg" alt="Ícone Pinterest" />
             </a>
           </div>
           <div class="icon">
-            <a href="#">
-              <img class="img" src="assets/ico-twitter.svg" />
+            <a href="#" title="Ícone Twitter">
+              <img class="img" src="assets/ico-twitter.svg" alt="Ícone Twitter" />
             </a>
           </div>
           <div class="icon">
-            <a href="#">
-              <img class="img" src="assets/ico-youtube.svg" />
+            <a href="#" title="Ícone Youtube">
+              <img class="img" src="assets/ico-youtube.svg" alt="Ícone Youtube" />
             </a>
           </div>
           <div class="icon">
-            <a href="#">
-              <img class="img" src="assets/ico-linkedin.svg" />
+            <a href="#" title="Ícone LinkedIn">
+              <img class="img" src="assets/ico-linkedin.svg" alt="Ícone LinkedIn" />
             </a>
           </div>
         </div>
       </div>
       <div class="accessibility">
-        <h1 class="title">Acessibilidade</h1>
-        <img class="img" src="assets/ico-a11y.webp" />
+        <h3 class="title">Acessibilidade</h3>
+        <img class="img" src="assets/ico-a11y.webp" alt="Ícone NVDA" />
       </div>
     </div>
     <div class="bottom">
@@ -517,20 +530,11 @@
           </p>
         </div>
         <div class="stamp">
-          <img class="img" src="assets/ra1000.webp" />
+          <img class="img" src="assets/ra1000.webp" alt="Ra1000" />
         </div>
       </div>
     </div>
   </div>
 </body>
-
-<script>
-  document.write(
-    '<script src="http://' +
-    (location.host || "localhost").split(":")[0] +
-    ':35729/livereload.js?snipver=1"></' +
-    "script>"
-  );
-</script>
 
 </html>

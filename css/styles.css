@@ -85,6 +85,9 @@
     display: flex;
   }
 }
+.header__top__mobile__title {
+  color: #333;
+}
 .header__searchbar {
   background: #fff;
   color: #d3d3d3;
@@ -386,10 +389,11 @@ li {
   font-style: italic;
   opacity: 42%;
   font-weight: 600;
+  color: #333;
 }
 .footer .contact .btn {
   margin-left: 20px;
-  color: rgba(0, 0, 0, 0.26);
+  color: #333;
   box-shadow: none;
   background-color: rgba(0, 0, 0, 0.12);
   border-radius: 4px;
@@ -399,6 +403,7 @@ li {
 .footer .contact .btn .txt {
   font-size: 0.8125rem;
   text-transform: uppercase;
+  color: #333;
 }
 .footer .contact .apps {
   display: flex;
